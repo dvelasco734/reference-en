@@ -58,12 +58,12 @@ void setup() {
 }
 
 void loop() {
-  // send data only when you receive data:
+  // only send data when you receive data:
   if (Serial.available() > 0) {
     // read the incoming byte:
     incomingByte = Serial.read();
 
-    // say what you got:
+    // print what you got to the serial port:
     Serial.print("I received: ");
     Serial.println(incomingByte, DEC);
   }
